@@ -33,10 +33,6 @@ for track in pattern:
             pitch = event.data[0]
             velocity = event.data[1]
 
-            current_channel.append(tick)
-            current_channel.append(pitch)
-            current_channel.append(velocity)
-
             if tick == 0:
                 current_channel.append(0)
                 current_channel.append(0)
