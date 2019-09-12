@@ -37,7 +37,10 @@ for track in pattern:
             current_channel.append(pitch)
             current_channel.append(velocity)
 
-            if tick > 0b11111111:
+            if tick == 0:
+                current_channel.append(0)
+                current_channel.append(0)
+            elif tick > 0b11111111:
                 current_channel.append(0)
                 current_channel.append((tick >> 8) & 0xFF)
                 current_channel.append(tick & 0xFF)
